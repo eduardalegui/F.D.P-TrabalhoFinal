@@ -15,7 +15,7 @@ public class Turma {
 
     public int getQuantAlunos() {
         return quantAlunos;
-    }
+    } 
 
     public static double mediaQtdAlunos(Turma[] turmas) {
         int total = 0;

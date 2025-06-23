@@ -8,7 +8,7 @@ public class Professor {
         this.titulacao = titulacao;
         this.matricula = matricula;
     }
-
+    
     public void adicionarProfessor(String nome, String titulacao, int matricula) {
         this.nome = nome;
         this.titulacao = titulacao;

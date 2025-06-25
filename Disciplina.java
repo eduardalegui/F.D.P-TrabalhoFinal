@@ -1,15 +1,29 @@
 public class Disciplina {
-    private String name;
+    private String nome;
     private String requisitos;
     private int creditos;
 
-    public Disciplina(String name, String requisitos, int creditos) {
-        this.name = name;
+    public Disciplina(String nome, String requisitos, int creditos) {
+        this.nome = nome;
         this.requisitos = requisitos;
         this.creditos = creditos;
     }
 
-    public String listarDisciplinas() {
-        return "Disciplina: " + name + ", Requisitos: " + requisitos + ", Créditos: " + creditos;
+   public String getNome(){
+        return nome;
+    }
+
+    public String getRequisitos(){
+        return requisitos;
+    }
+
+    public int getCreditos(){
+        return creditos;
+    }
+     
+    public void listarDisciplinas(Disciplina[] disciplinas){
+        for (Disciplina disciplina : disciplinas) {
+            System.out.println("Disciplina: "+ disciplina.getNome() + " Requisitos: " + disciplina.getRequisitos() + " Créditos: " + disciplina.getCreditos());
+        }
     }
 }

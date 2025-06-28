@@ -35,7 +35,7 @@ public class Professor {
     public void setMatricula(int matricula){
         this.matricula = matricula;
     } 
-     
+    
     public void listarProfessores(Professor[] prof){
         for (Professor professor : prof) {
             System.out.println("Professor: "+ professor.getNome() + " Titulação: " + professor.getTitulacao() + " Matrícula: " + professor.getMatricula());

@@ -33,14 +33,15 @@ public class App {
         switch(op){
             case 1:
                 System.out.println("Programação Orientada a Objetos");
-                //o que acontece --> abre a turma, mostrando tudo
-                
+                Turma.mostrarTurmasPoo(turmas, sc);
                 break;
             case 2:
                 System.out.println("Algoritmos e Estrutura de Dados I");
+                Turma.mostrarTurmasAlg(turmas, sc);
                 break;
             case 3: 
                 System.out.println("Banco de Dados");
+                Turma.mostrarTurmasBdd(turmas, sc);
                 break;
             case 4:
                 System.out.println("Ver média de alunos por turma");
@@ -50,13 +51,13 @@ public class App {
             case 5:
                 System.out.println("Ver menor turma desse semestre");
                 Turma menor = Turma.buscarMenorTurma(turmas);
-                System.out.println("A menor turma é " + menor.getDisciplina().getNome() + " do(a) professor(a) " + menor.getProfessor().getNome());
+                System.out.println("A menor turma é " + menor.getDisciplina().getNome() + " do(a) professor(a) " + menor.getProfessor().getNome() + ", com " + menor.getQuantAlunos() + " alunos");
             default:
                 System.out.println("Opção inválida, tente novamente.");
                 break;
         }
 
-        } while(op == 0 || op > 3);
+        } while(op == 0 || op > 5);
         
         sc.close();
     }

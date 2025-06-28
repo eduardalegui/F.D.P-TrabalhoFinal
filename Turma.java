@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class Turma {
-    Scanner sc = new Scanner(System.in);
     
     private String dia;
     private String horario;
@@ -40,11 +39,11 @@ public class Turma {
         return this.professor;
     }
 
-    public void setQuantAlunos() {
+    public void setQuantAlunos(int quantAlunos) {
         this.quantAlunos = quantAlunos;
     }
 
-    public void setDia (){
+    public void setDia (String dia){
         this.dia = dia;
     }
 
@@ -52,11 +51,11 @@ public class Turma {
         this.horario = horario;
     }
 
-    public void setDisciplina(){
+    public void setDisciplina(Disciplina disciplina){
         this.disciplina = disciplina;
     }
 
-    public void setProfessor(){
+    public void setProfessor(Professor professor){
         this.professor = professor;
     }
 
@@ -78,7 +77,7 @@ public class Turma {
         return menor;
     }
 
-    public void mostrarTurmasPoo(Turma[] turmas){// turma 0 e 1
+    public static void mostrarTurmasPoo(Turma[] turmas, Scanner sc){// turma 0 e 1
         int op;
         System.out.println("Selecione a turma desejada entre as disponíveis para a disciplina programação orientada a objetos (0 ou 1):");
         op=sc.nextInt();
@@ -92,7 +91,7 @@ public class Turma {
         }
     }
 
-    public void mostrarTurmasAlg(Turma[] turmas){// turma 2 e 3
+    public static void mostrarTurmasAlg(Turma[] turmas, Scanner sc){// turma 2 e 3
         int op;
         System.out.println("Selecione a turma desejada entre as disponíveis para a matéria: ");
         op = sc.nextInt();
@@ -106,10 +105,13 @@ public class Turma {
         }
     }
 
-    public void mostrarTurmasBdd(Turma[] turmas){// turma 4 e 5 
-        System.out.println("Selecione a turma desejada entre as disponíveis para a matéria (4 ou 5): ");
-        int op = sc.nextInt();
-        switch (op) {
+    public static void mostrarTurmasBdd(Turma[] turmas, Scanner sc){// turma 4 e 5 
+        int op = 0;
+        do{
+            System.out.println("Selecione a turma desejada entre as disponíveis para a matéria (4 ou 5): ");
+            op = sc.nextInt();
+        
+            switch (op) {
             case 4:
                 System.out.println("Turma 4: " + turmas[op].toString());
                 break;
@@ -117,8 +119,11 @@ public class Turma {
                 System.out.println("Turma 5: " + turmas[op].toString());
                 break;
             default:
+                System.out.println("Opção inválida!");
                 break;
-        }
+            }
+        }while (op != 4 || op != 5);
+        
     }
     
 

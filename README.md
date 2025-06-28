@@ -5,4 +5,10 @@ escolha a diciplina: 
 2 - banco de dados
 3 - engenharia de requisitos
 
-escolha 
+Deve haver pelo pelo menos uma funcionalidade de inserção de dados;
+
+if else LEMBRAR!!!
+MATRIZ
+
+
+metodo para mostrar os detalhes da turma 

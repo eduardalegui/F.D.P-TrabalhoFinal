@@ -22,7 +22,19 @@ public class Professor {
 
     public int getMatricula(){
         return matricula;
+    } 
+
+    public void setNome(String nome){
+        this.nome = nome;
     }
+
+    public void setTitulacao(String titulacao){
+        this.titulacao = titulacao;
+    }
+
+    public void setMatricula(int matricula){
+        this.matricula = matricula;
+    } 
      
     public void listarProfessores(Professor[] prof){
         for (Professor professor : prof) {

@@ -31,7 +31,7 @@ public class Tabela {
         String[] dias = {"Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira"};
         String[] horarios = {"JK", "LM", "NP"};
 
-        System.out.println("\nGRADE FINAL:");
+        System.out.println("\n↖(^o^)↗ GRADE FINAL:");
         System.out.print("      ");
         for (String dia : dias) {
             System.out.print(String.format("%-20s", dia));

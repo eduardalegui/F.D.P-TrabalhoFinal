@@ -36,18 +36,9 @@ public class Professor {
         this.matricula = matricula;
     } 
     
-    public void listarProfessores(Professor[] prof){
+    public static void listarProfessores(Professor[] prof){
         for (Professor professor : prof) {
-            System.out.println("Professor: "+ professor.getNome() + " Titulação: " + professor.getTitulacao() + " Matrícula: " + professor.getMatricula());
+            System.out.println("Professor(a): "+ professor.getNome() + " | Titulação: " + professor.getTitulacao() + " | Matrícula: " + professor.getMatricula());
         }
     }
-    // public void adicionarProfessor(String nome, String titulacao, int matricula) {
-    //     this.nome = nome;
-    //     this.titulacao = titulacao;
-    //     this.matricula = matricula;
-    // }
-
-    // public String toString(){
-    //     return "Professor: "+ nome + " Titulação: " + titulacao + " Matrícula: " + matricula;
-    // }
 }

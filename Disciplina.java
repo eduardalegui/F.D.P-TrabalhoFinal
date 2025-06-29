@@ -35,10 +35,14 @@ public class Disciplina {
     public void setCreditos(int creditos){
         this.creditos = creditos;
     }   
-     
-    public void listarDisciplinas(Disciplina[] disciplinas){
-        for (Disciplina disciplina : disciplinas) {
-            System.out.println("Disciplina: "+ disciplina.getNome() + " Requisitos: " + disciplina.getRequisitos() + " Créditos: " + disciplina.getCreditos());
+    
+    public static void listarDisciplinas(Disciplina[] disciplinas) {
+    for (Disciplina disciplina : disciplinas) {
+        System.out.printf("Disciplina: %-18s | Requisitos: %-25s | Créditos: %d\n",
+                disciplina.getNome(),
+                disciplina.getRequisitos(),
+                disciplina.getCreditos());
         }
     }
-}
+
+ }

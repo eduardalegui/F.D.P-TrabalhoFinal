@@ -62,7 +62,7 @@ public class App {
                     System.out.println("Opção inválida, tente novamente.");
                     break;
             }
-            System.out.println("\n☞ Digite 1 se quer continuar ou 0 para encerrar e ver a sua grade de horários."); //opção para o usuário continuar ou terminar o programa
+            System.out.println("\n☞ Digite 1 se quer continuar ou qualquer outro número para encerrar e ver a sua grade de horários."); //opção para o usuário continuar ou terminar o programa
             continuar = sc.nextInt();
         } while(continuar == 1);
 

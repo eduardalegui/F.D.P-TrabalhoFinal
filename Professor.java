@@ -1,4 +1,4 @@
-public class Professor {
+public class Professor { //classe Professor com 3 atributos
     private String nome;
     private String titulacao;
     private int matricula;
@@ -6,11 +6,13 @@ public class Professor {
     public Professor(){
     }
 
-    public Professor(String nome, String titulacao, int matricula) {
+    public Professor(String nome, String titulacao, int matricula) {//construtor com parâmetros
         this.nome = nome;
         this.titulacao = titulacao;
         this.matricula = matricula;
     }
+
+    // Getters e Setters
 
     public String getNome(){
         return nome;
@@ -36,8 +38,8 @@ public class Professor {
         this.matricula = matricula;
     } 
     
-    public static void listarProfessores(Professor[] prof){
-        for (Professor professor : prof) {
+    public static void listarProfessores(Professor[] prof){ //método para listar professores
+        for (Professor professor : prof) { //para cada professor do vetor prof
             System.out.println("Professor(a): "+ professor.getNome() + " | Titulação: " + professor.getTitulacao() + " | Matrícula: " + professor.getMatricula());
         }
     }
